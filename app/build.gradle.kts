@@ -1,20 +1,22 @@
+import com.dev.pariisa.dota2.dependencies.ConfigData
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
 }
 
 android {
-    namespace = "com.dev.pariisa.dota2"
-    compileSdk = 34
+    namespace = ConfigData.nameSpace
+    compileSdk = ConfigData.compileSdkVersion
 
     defaultConfig {
-        applicationId = "com.dev.pariisa.dota2"
-        minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = ConfigData.applicationId
+        minSdk = ConfigData.minSdkVersion
+        targetSdk = ConfigData.targetSdkVersion
+        versionCode = ConfigData.versionCode
+        versionName = ConfigData.versionName
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = ConfigData.testInstrumentationRunner
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -34,13 +36,13 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = ConfigData.jvmTarget
     }
     buildFeatures {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = ConfigData.kotlinCompilerExtensionVersion
     }
     packaging {
         resources {

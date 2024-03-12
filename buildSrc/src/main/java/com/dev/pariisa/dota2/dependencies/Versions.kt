@@ -26,6 +26,7 @@ object Versions {
     const val coroutinesAdapter = "0.9.2"
     const val gradleVersion = "8.0"
     const val hilt = "2.48.1"
+    const val sqDelight = "1.5.1"
     const val hiltViewModel = "1.0.0"
     const val room = "2.6.0"
     const val dagger = "2.48.1"
